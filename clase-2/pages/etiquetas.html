@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--etiquetas de titulo o heading tags
+    se ordenan de manera jerarquica y van del h1 al h6
+    -->
+    <!-- ctrl + k + c -->
+
+    <!-- <h1>titulo principal del sitio</h1> solamente podemos tener 1 por html--
+    <h2>subtitulo</h2> -estos subtitulos se pueden repetir las veces que sean necesarios-
+    <h3>subtitulo</h3>
+    <h4>subtitulo</h4>
+    <h5>subtitulo</h5>
+    <h6>subtitulo</h6> -->
+
+    <h1>chevrolet</h1>
+    <h2>autos</h2>
+    <h3>cruze</h3>
+    <h4>sedan</h4>
+    <h5>lt</h5>
+    <h5>premier</h5>
+    <h4>hachback</h4>
+    <h3>onix</h3>
+    <h2>pickups</h2>
+
+    <p>la etiqueta para parrafos</p>
+
+    <!--existen etiquetas que nos sirven para generar listas-->
+
+    <!--listas ordenadas-->
+
+    <ol>
+        <li>comprar la carne</li>
+        <li>prender el fuego</li>
+        <li>hacer un fernet</li>
+        <li>tirar la carne al fuego</li>
+    </ol>
+
+    <!--listas desordenadas-->
+
+    <ul>
+        <li>fernet</li>
+        <li>manaos</li>
+        <li>hielo</li>
+        <li>tapita de asado</li>
+        <li>chinchu</li> <!--list item-->
+        <li>carbon</li>
+    </ul>
+
+    <!--lista de definicion, se utilizan en glosarios diccionarios o cuando se defina algo-->
+
+    <dl> <!--definition list-->
+        <dt>coderhouse</dt> <!--definition title-->
+        <dd>instituto para aprender programacion</dd> <!--definition description-->
+        <dt>maximiliano cardenas</dt>
+        <dd>un tipazo</dd>
+    </dl>
+
+    <!-- enlaces, anchor, o etiqueta a
+    nos sirven para conectarnos atraves de hipervinculos a sitios externos
+    archivos dentro de nuestro proyecto, y a enlazarnos con otras partes de nuestro codigo
+    dentro del mismo. 
+    -->
+    <!--enlace relativo,nos permite ir a otro archivo dentro de nuestro proyecto
+    
+    ./ => ir hacia adelante
+    ../ => significa ir hacia atras
+    -->
+    <a href="../index.html">ir al index</a>
+    
+    <!-- enlace absoluto es el que nos permite ir a otros sitios externos-->
+    <a href="https://www.instagram.com" target="_blank">instagram</a>
+    <!--enlace interno, nos permite morvenos dentro del mismo documento-->
+
+
+    <!--etiquetas multimedia
+    jpg son las mas pesedas porque retienen mas informacion
+    png => son las imagenes sin fondo
+    gif => imagenes animadas
+    svg => lo ideal por imagenes vectoriales,  
+    webp => y son imagenes que retienen mucha informacion y son livianas. 
+    -->
+    <img src="../assets/img/cartas.jpg" alt="carta de felicitaciones ">
+    <img src="https://images.unsplash./photo-1734014937757-f39209af0579?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="copo de nieve de papel con fondo negro">
+
+    <!--video -->
+    <video src="" controls></video>
+    <audio src="" controls></audio>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/i1DcJlqWYOM?si=HTb4Nko4sE0ww1NF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2lbtn3PJE4hHQcYp90vQ5J?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1111.5584801709722!2d-57.541130409326286!3d-38.001343175400244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sar!4v1734447126832!5m2!1sen!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1645.5116907463785!2d-58.574412798882115!3d-34.42616120054302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca59914f3b9bf%3A0x4b9d34ad6e87b172!2sBDG%2C%20Remedios%20de%20Escalada%20de%20San%20Mart%C3%ADn%20287%2C%20B1648%20Tigre%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1734447257624!5m2!1sen!2sar" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+    <h1>biografia de daniel</h1>
+    <ul>
+        <li><a href="#nacimiento">nacimiento</a></li>
+        <li><a href="#logros">logros</a></li>
+        <li><a href="">periodo en la carcel</a></li>
+
+    </ul>
+
+
+    <section id="nacimiento">
+        <h2>nacimiento</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae molestiae nam odit mollitia optio? Dolorum impedit placeat non culpa tempora quod dolores odio, atque ad deleniti explicabo quidem pariatur sequi?</p>
+    </section>
+    <section id="logros">
+        <h2>logros</h2>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, asperiores. Fugiat laborum nemo ipsum qui aperiam cumque perferendis voluptatibus repudiandae expedita quidem, quia vitae sit possimus suscipit nesciunt odit ipsa!
+        </p>
+    </section>
+</body>
+
+</html>

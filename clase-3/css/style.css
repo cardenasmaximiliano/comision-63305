@@ -1,0 +1,90 @@
+
+/* estilos generales*/
+ p{
+    font-size:20px; /*16px es la medida standard*/
+    color: blue;
+} 
+h2{
+    font-size: 26px;
+   text-align: center;
+}
+footer p{
+    color: red;
+}
+
+section p{
+    color: chocolate;
+}
+
+section div p{
+    color: cadetblue;
+    text-decoration: line-through;
+}
+/*
+las clases o class
+son selectores de css
+ que nos permiten darle un identificador
+ especial a las etiquetas.
+ con las caules css las va a diferenciar.
+
+ contenedor noticias
+
+ mi primera clase
+
+ maxi de mar del re piola
+nomenclaturas o maneras de escribir
+selectores en programacion.
+
+
+camelCase => contenedorNoticias
+                miPrimeraClase
+                maxiDeMarDelRePiola  
+
+kebab => mi-primera-clase
+
+snake_case = mi_primera_clase
+
+BEM = mi__primera--clase
+
+*/
+
+section{
+    background-color: lightgray;
+}
+
+
+.sectionNoticias{
+    background-color: rgb(25, 255, 21);
+}
+
+.sectionNoticias article{ /*10 + 1*/
+    background-color: aquamarine;
+}
+
+.sectionNoticias .articleNoticias{ /*20puntos*/
+    background-color: black;
+}
+
+.sectionNoticias .articleNoticiasFuente h2{
+    color: beige;
+}
+
+.sectionNoticias .articleNoticiasFuente p{
+    color: beige;
+}
+/*
+etiqueta = 1 punto
+clase = 10puntos
+id = 100 puntos
+
+*/
+/*
+el uso de id se reserva para el manejo de javascript.
+Solamente se puede aplicar la creacion de un id por unica vez
+
+id => en un caso de emergencia
+*/
+
+#pepito{
+    color: red;
+}
