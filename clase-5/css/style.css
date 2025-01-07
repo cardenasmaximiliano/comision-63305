@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+concepto de etiquetas segun css.
+
+en bloque o block => va a ocupar el 100% del tamaño del contenedor.
+suelen ser todas etiquetas contenedoras, y de contenido
+
+en linea o inline => solamente va a ocupar el espacio de su contenido
+las etiquetas multimedia, botones, span, strong, em, b, anclas
+
+PROPIEDAD DISPLAY => cambia el estado natural
+de las etiquetas.
+
+maquetacion clasica trabajaba con block e inline
+
+maquetacion moderna => flex y grids
+
+
+flexbox => modelo flexible. 
+es de tipo unidireccional o unidimencional. 
+
+toma un eje como principal y un eje como secundario.
+
+
+
+
+*/
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 1.25rem;
+    align-items: center;
+    background-color: lightgray;
+    width: 100%;
+    margin-top: 40px;
+    position: sticky;
+    top: 10px;
+    z-index: 10;
+}
+header a{
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+header a img{
+    width: 6.25rem;
+    display: inline;
+}
+
+
+li{
+   list-style: none;
+}
+nav{
+    width: 90%;
+}
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    /*
+    flexbox tiene 2 propiedades importantes
+    que lo acompañan flex-direction y flex-wrap
+    
+    flex-direction nos da la direccion o orientacion de los 
+    elementos hijos, por defecto la direccion es en row.
+    */
+    flex-direction:row;
+    gap: 20px;
+    
+}
+
+.container-info{
+    display: flex;
+    flex-wrap: wrap;
+    /*una vez que tenemos flex direction y
+    flex wrap
+    podemos utilizar propiedades para ordenar los elementos de la 
+    caja. 
+
+    siempre y cuando flex direction este en row
+
+    todos los movimientos en el eje horizontal
+    van a estar dados por una propiedad llamadas 
+    justify-content
+    y todos los movimientos en el eje vertical
+    van a estar dados por una propiedad llamada
+    align-items
+
+    */
+
+    justify-content:space-evenly;
+    width: 100%;
+    height: 600px;
+    background-color: antiquewhite;
+    position: relative;
+}
+
+.card-info{
+    width: 200px;
+    height: 350px;
+    background-color: lightgray;
+   
+    border-radius: .625rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.467);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.card-info img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.card-info h3{
+    font-size: 22px;
+    text-align: center;
+}
+
+.card-info ul li{
+    list-style:decimal;
+    list-style-position: inside;
+}
+
+.card-info button{
+    padding: .625rem 1.25rem;
+}
+
+figure{
+    display: flex;
+    align-items: center;
+}
+
+/*
+las propiedades que se aplican directamente al hijo
+son align-self y order.
+
+
+*/
+
+.card-1 {
+    background-color: rgb(127, 253, 104);
+    align-self: center;
+    order: 4;
+    position: relative;
+    /*
+    position nos ofrece 4 propiedades para mover los elementos
+    top
+    left
+    right
+    buttom
+    
+    */
+    right: 100px;
+    top: 200px;
+}
+.card-2 {
+    background-color: rgb(241, 253, 101);
+    order: 2;
+
+}
+.card-3 {
+    background-color: rgb(106, 86, 237);
+    align-self: flex-end;
+    order: 3;
+}
+.card-4 {
+    background-color: rgb(241, 73, 244);
+    order: 5;
+    position: relative;
+    
+}
+.card-4 div img{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+}
+.card-5 {
+    background-color: rgb(254, 75, 87);
+    order: 1;
+}
+
+/*
+position => las propiedades position permiten que las etiquetas salgan del flujo natural documento.
+todas las etiquetas tienen una position static (estaticos)
+
+relative
+absolute
+sticky
+fixed
+
+*/
+.fixed  img{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+}
