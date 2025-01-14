@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    align-items: center;
+    background-color: rgb(73, 73, 240);
+    color: white;
+}
+
+.navbar{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+
+}
+.navbar li a{
+    text-decoration: none;
+    color: white
+   
+}
+
+/*
+para que funcione responsive se pone: 
+
+@media( rango del breakpoint){
+
+    selectores{
+        propiedades que se van a modificar
+    }
+
+}
+
+cuando estamos trabajando desktop first (responsive web design) => el orden de las mediaquery son decrecientes (max-width)
+
+cuando trabajamos mobile first => el orden de las mediaquery es creciente (min-width:)
+
+
+*/
+
+.banner{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 18.75rem auto;
+    justify-content: center;
+    grid-template-areas: 
+    "item1 item2"
+    "item1 item3"
+    
+    ;
+    row-gap: 1.875rem;
+    margin-top: 1.875rem;
+}
+
+.banner-contenidos{
+    grid-area: item1;
+    align-self: center;
+    
+} 
+
+.banner-contenidos h1{
+    padding: 1.25rem 0px;
+}
+.banner-img{
+    grid-area: item2;
+}
+.banner-redes{
+    grid-area: item3;
+    justify-self: end;
+    padding-right: 1.25rem;
+}
+
+.banner-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.container-card{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 3.75rem;
+}
+.card{
+    width: 18.75rem;
+    height: 21.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.card-img{
+    background-color: rgba(204, 204, 204, 0.358);
+}
+.card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card button{
+    margin: auto;
+    width: 100px;
+}
+.sale-info{
+    position: absolute;
+    right: 0;
+    top: 1.25rem;
+    padding: 5px 1.25rem;
+    background-color: blue;
+    color: white;
+    margin-right: -10px;
+}
+@media(max-width:1024px){
+
+    header{
+        background-color: blueviolet;
+        justify-content: space-around;
+    }
+}
+
+@media(max-width:768px){
+    .navbar li a{
+        text-decoration: underline;
+    }
+    .banner{
+        grid-template-rows: auto 18.75rem;
+        grid-template-areas: 
+        
+        "item3 item2"
+        "item1 item2"
+        ;
+        gap: 0;
+    }
+    .banner-contenidos{
+        align-self: start;
+    }
+    .banner-contenidos h1{
+        padding-top: 0;
+    }
+    .banner-contenidos div{
+        display: none;
+    }
+    .banner-redes{
+        justify-self: start;
+    }
+
+    .card{
+        margin-bottom: 2.5rem;
+    }
+}
+
+
+@media(max-width:425px){
+    header{
+        flex-direction: column;
+    }
+    .banner{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 200px auto;
+        grid-template-areas: 
+        "item1"
+        "item2"
+        "item3"
+        ;
+    }
+    .banner-redes{
+        justify-self: center;
+        padding-top: 1.875rem;
+    }
+}
+
+@media(max-width:320px){
+    .navbar{
+        flex-direction: column;
+        padding-top: 30px;
+    }
+  
+}
