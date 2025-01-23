@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+pseudoclase = es una casi clase, que se va a activar cuando el usuario pase sobre algun elemento de html.
+Las pseudoclases se reconocen en CSS porque se le aplica : luego del selector.
+
+*/
+
+
+/* .navbar{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 20px;
+}
+
+.navbar li a{
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.navbar li a:visited{
+    color: rgb(59, 245, 59);
+    font-size: 20px;
+} */
+
+.nav-wrapper{
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+nav ul{
+    display: flex;
+    gap: 1.25rem;
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+nav #toggle, nav label{
+    display: none;
+}
+
+/* .oculto{
+   
+    width: 200px;
+    height: 6.25rem;
+    border: 1px solid black;
+    overflow: hidden;
+} */
+
+@media(max-width:768px){
+    .nav-wrapper{
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(128, 128, 128, 0.391);
+    }
+    nav .menu{
+        width: 100%;
+        overflow: hidden;
+        height: 0;
+    
+    }
+    nav ul{
+        flex-direction: column;
+
+        align-items: center;
+        padding: 0.5rem;
+        
+    }
+    nav label{
+        display: inline-flex;
+        color: white;
+        cursor: pointer;
+      
+    
+    }
+    nav #toggle:checked ~ .menu{
+        height: 100%;
+    }
+}
+
+/*
+pseudoelementos, son palabras claves que nos permiten aplicar
+estilos a ciertas partes especificas de un elemento.
+:: 
+
+*/
+
+h1::after{
+    content:" esto esta hecho en css";
+    color: burlywood;
+
+}
+
+h1::before{
+    content: "esto esta hecho antes ";
+
+}
+
+.banner div p::first-letter{
+    font-size: 1.875rem;
+    color: red;
+    padding: 5px;
+}
+
+.banner div p::first-line{
+    background-color: lightcyan;
+}
+
+.banner div p::selection{
+    background-color: pink;
+    color: rgb(220, 216, 216);
+}
+
+input::placeholder{
+    color: red;
+}
+
+/*
+:hover => se va a activar unicamente si el usuario 
+pasa por encima del elemento con el mouse. 
+*/
+
+.navbar li a:hover{
+        background-color: rgba(128, 128, 128, 0.254);
+        color: white;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner div{
+    width: 31.25rem
+}
+
+.banner img{
+    width: 500px;
+    /* filter:drop-shadow() */
+}
+
+.banner div h1:hover{
+    color:green;
+}
+
+.banner img:hover{
+    filter: drop-shadow(2px 2px 5px rgb(69, 231, 102));
+}
+
+.banner div button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: lightgreen;
+    margin-top: 20px;
+      
+}
+
+/*
+active se va a ejecutar las propiedades
+si se mantiene el click izquierdo sobre el elemento
+*/
+
+.banner div button:active{
+        background-color: rgb(61, 229, 61);
+        color: white;
+}
+
+.banner div button:hover{
+    background-color: rgb(108, 240, 108);
+    box-shadow: 1px 2px 4px rgb(92, 243, 92);   
+}
+
+
+form{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3.125rem;
+}
+
+form input{
+    all: unset;
+    width: 500px;
+    border-bottom: 2px solid green;
+    margin-bottom: .625rem;
+    text-align: center;
+}
+
+/*
+focus solamente funciona con elementos 
+de tipo input.
+*/
+
+form input:focus{
+    background-color: lightgreen;
+    
+}
+
+.texto{
+    display: flex;
+    gap: 30px;
+}
+
+/*
+:nth-child 
+:first-child
+:last-child
+
+estas pseudoclases funcionan como si fuera 
+una clase y nos permiten seleccionar a elementos
+hijos dentro de un contenedor.
+*/
+
+.texto p:first-child{
+    background-color: lightgreen;
+}
+
+
+.texto p:last-child{
+    background-color: black;
+    color: green;
+}
+
+.texto p:nth-child(3){
+    background-color: pink;
+}
+
+/*
+not aplica propiedades a todas las etiquetas menos
+a la que posea una clase y se ponga dentro de los parentesis
+
+*/
+.otros-textos{
+    display: flex;
+    gap: 1.875rem;
+    margin-top: 3.125rem;
+}
+
+.otros-textos p:not(.diferente){
+   background-color: lightblue;
+   color: white;
+   font-size: 1.25rem;
+}
