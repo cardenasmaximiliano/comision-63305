@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap');
+
+
+@font-face {
+    font-family: "pepito" ;
+    src: url("../assets/fuentes/porter-sans-inline-block.ttf");
+}
+
+
+body{
+  
+    /* background-color: black; */
+    height: 100vh;
+
+}
+
+/*
+font-family: "Roboto", serif;
+ font-family: "Rubik Vinyl", serif;
+*/
+
+/*
+width y height
+ancho y alto
+
+
+width, sirve para el ancho de pantalla. 
+sirve para marcar el alto.
+
+todos los sitios webs trabajan con una medida llamada pixeles. 
+
+px => en los navegadores la medida estandar de pixeles es 16px
+
+los pixeles se consideran medidas absolutas. 500px => se comporta igual en desktop tablet y mobile.
+
+medidas relativas => son medidas que se adaptan mejor a los diferentes tamaños de pantalla.
+
+% => se va a adaptar al ancho de pantalla donde se despliegue la pagina. 
+
+rem => se penso para los textos, 
+
+em =>
+
+
+viewwidth vw => 100vw 
+viewheight vh => 100vh
+
+*/
+
+/* .cuadrado{
+    width: 50%;
+    height: 30px;
+    background-color: lightblue;
+} */
+
+html{
+    font-size: 1rem;
+    /*
+    16px => 1rem
+
+    25px => 
+    
+    */
+}
+
+
+.logo img{
+    width: 6.25rem;
+    height: 150px;
+    object-fit: contain;
+}
+
+/*
+
+
+*/
+
+.aprenderEm{
+    font-size: 25px;
+    color: white;
+}
+
+.aprenderEm p{
+    font-size: 1.5em;
+    font-family: "pepito";
+}
+
+/*
+sumar fuentes al proyectos 
+*/
+
+
+/*
+box modeling
+
+nos dice que todas etiquetas pueden ocupar
+mas espacio del que tienen por defecto. 
+
+poseen 
+padding => patio interno
+border => la pared
+margin => patio externo
+
+*/
+
+button{
+    
+    /* padding: 30px; */
+    padding-top: 10px;
+    /* padding-right: 20px;
+    padding-bottom: 4px;
+    padding-left: .9375rem; */
+    padding: 20px 10px 30px 0px ;
+    padding: 30px 20px;
+
+    /*borde le da el borde al elemento o limita el elemento
+    
+    border-style
+    border-color
+    border-width
+    */
+    border: 2px solid red;
+    border-top: 10px dotted rgba(58, 58, 159, 0.498);
+
+    margin: 20px;
+    margin-top: 10px;
+    margin-right: 50px;
+    margin: 10px 5px 4px 20px;
+    border-radius: 4px 5px 10px 20% ;
+}
+
+input{
+    all: unset;
+    border-bottom: 2px solid red;
+    padding-bottom: 5px;
+}
